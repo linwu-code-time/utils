@@ -1,0 +1,45 @@
+{
+  "name": "@cete/tsconfig",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "tsconfig.json inheritance via Node.js packages",
+  "keywords": [
+    "tsconfig",
+    "base",
+    "inheritance",
+    "share"
+  ],
+  "homepage": "https://github.com/linwu-code-time/utils#readme",
+  "bugs": {
+    "url": "https://github.com/linwu-code-time/utils/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "linwu",
+    "email": "linwu.hi@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linwu-code-time/utils.git"
+  },
+  "exports": {
+    ".": {
+      "import": "./tsconfig.json",
+      "require": "./tsconfig.json"
+    }
+  },
+  "files": [
+    "tsconfig.json"
+  ],
+  "peerDependencies": {
+    "typescript": "^4.4.2"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=7"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "tsconfig": "tsconfig.json"
+}

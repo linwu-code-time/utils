@@ -1,0 +1,42 @@
+{
+  "name": "utils",
+  "private": true,
+  "homepage": "https://github.com/linwu-code-time/utils#readme",
+  "bugs": {
+    "url": "https://github.com/linwu-code-time/utils/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "linwu",
+    "email": "linwu.hi@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linwu-code-time/utils.git"
+  },
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r run dev --parallel",
+    "lint": "eslint . --fix",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "publish": "pnpm run build && changeset publish",
+    "update:deps": "pnpm update -i --latest",
+    "version": "changeset && changeset version",
+    "link": "cd packages/cli && npm link",
+    "unlink": "cd packages/cli && npm unlink"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.25.2",
+    "@cete/eslint-config": "workspace:*",
+    "@cete/tsconfig": "workspace:*",
+    "@commitlint/cli": "^17.3.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.29.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "rimraf": "^3.0.2",
+    "tsup": "^6.5.0"
+  }
+}
